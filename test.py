@@ -61,7 +61,7 @@ def main():
     application_id = create_application(program.get('id'), application_details)
     print "new application created with id", application_id
     application = get_application(application_id)
-    pprint(application)
+    assert application['id'] == application_id
 
 
 if __name__ == '__main__':
